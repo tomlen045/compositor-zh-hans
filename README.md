@@ -2,7 +2,7 @@
 
 给 macOS 开源图像编辑器 [Compositor](https://github.com/robbietilton/Compositor) 打的简体中文语言包 —— **570 条界面文案全中文**，不改程序、不用 Xcode、30 秒装好、随时还原。
 
-![zh](https://img.shields.io/badge/语言-简体中文-red) ![coverage](https://img.shields.io/badge/覆盖-570%2F571%20键-brightgreen) ![no-xcode](https://img.shields.io/badge/无需-Xcode-success) ![version](https://img.shields.io/badge/适配-Compositor%201.5.2-blue)
+![zh](https://img.shields.io/badge/语言-简体中文-red) ![coverage](https://img.shields.io/badge/覆盖-570%2F571%20键-brightgreen) ![no-xcode](https://img.shields.io/badge/无需-Xcode-success) ![version](https://img.shields.io/badge/包版本-v1.2-green) ![适配](https://img.shields.io/badge/适配-Compositor%201.5.2-blue)
 
 ## 这是什么
 

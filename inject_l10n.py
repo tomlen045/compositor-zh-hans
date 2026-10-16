@@ -57,7 +57,16 @@ def main():
     # re-sign (ad-hoc) so macOS will still launch the modified bundle
     r = subprocess.run(["codesign", "--force", "--deep", "--sign", "-", app],
                        capture_output=True, text=True)
-    print("codesign:", "OK" if r.returncode == 0 else r.stderr.strip()[:300])
+    if r.returncode != 0:
+        print("codesign FAILED:", r.stderr.strip()[:300])
+        sys.exit(r.returncode)
+    # verify the re-signed bundle actually validates
+    v = subprocess.run(["codesign", "--verify", "--deep", "--strict", app],
+                       capture_output=True, text=True)
+    if v.returncode != 0:
+        print("codesign verify FAILED:", (v.stderr or v.stdout).strip()[:300])
+        sys.exit(v.returncode)
+    print("codesign: OK (verified)")
 
 if __name__ == "__main__":
     main()
